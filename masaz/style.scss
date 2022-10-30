@@ -1,0 +1,68 @@
+@import "./reset";
+
+$accent-1: #FBC5A4;
+$accent-2: #E3B888;
+$accent-3: #FDD998;
+$accent-4: #a74220;
+$accent-5: #c3542f;
+
+$background: white;
+$foreground: $accent-5;
+
+body{
+    background-color: $background;
+    color: $foreground;
+    font-family: "roboto";
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    grid-template-areas:
+        "header header header"
+        ". content ."
+        "footer footer footer"
+}
+
+header{
+    grid-area: header;
+    margin-bottom: 5rem;
+
+    ul{
+        list-style: none;
+        justify-content: space-evenly;
+        display: flex;
+
+        a{
+            color: $accent-4;
+        }
+    }
+}
+.content{
+    grid-area: content;
+
+    section{
+        max-width: 1080px;
+        padding: 1rem;
+    }
+
+    #intro, #about{
+        display: flex;
+        align-items: center;
+
+        p{
+            text-align: justify;
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+    
+}
+
+footer{
+    grid-area: footer;
+}
+
+h1,h2,h3{
+    color: $accent-4;
+}
