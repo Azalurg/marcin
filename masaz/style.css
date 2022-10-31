@@ -77,7 +77,7 @@ select {
 }
 body {
   background-color: white;
-  color: #c3542f;
+  color: #c17e41;
   font-family: "roboto";
   min-height: 100vh;
   display: grid;
@@ -88,6 +88,8 @@ body {
 header {
   grid-area: header;
   margin-bottom: 5rem;
+  padding: 0.5rem;
+  background-color: #f0d8cd;
 }
 header ul {
   list-style: none;
@@ -95,7 +97,16 @@ header ul {
   display: flex;
 }
 header ul a {
-  color: #a74220;
+  color: #aa4a2a;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-bottom: #aa4a2a 2px solid;
+}
+header ul a:hover, header ul a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .content {
@@ -104,22 +115,58 @@ header ul a {
 .content section {
   max-width: 1080px;
   padding: 1rem;
+  margin-bottom: 1rem;
 }
 .content #intro, .content #about {
   display: flex;
   align-items: center;
 }
-.content #intro p, .content #about p {
-  text-align: justify;
-}
 .content #intro img, .content #about img {
   width: 100%;
+}
+.content #offer ol {
+  background-color: #fbf5f2;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-block: 0;
+  margin-inline: 0;
+}
+.content #offer ol li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+.content #offer ol li .number {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  background-color: #f0d8cd;
+  color: #c17e41;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.content #offer ol li b {
+  color: #aa4a2a;
 }
 
 footer {
   grid-area: footer;
+  height: 10vh;
+  background-color: #333333;
 }
 
 h1, h2, h3 {
-  color: #a74220;
+  color: #aa4a2a;
+}
+
+p {
+  text-align: justify;
 }/*# sourceMappingURL=style.css.map */

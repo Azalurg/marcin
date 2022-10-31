@@ -1,13 +1,14 @@
 @import "./reset";
 
-$accent-1: #FBC5A4;
-$accent-2: #E3B888;
-$accent-3: #FDD998;
-$accent-4: #a74220;
-$accent-5: #c3542f;
+$accent-0: #fbf5f2;
+$accent-1: #f0d8cd;
+$accent-2: #d9a38a;
+$accent-3: #c88d57;
+$accent-4: #c17e41;
+$accent-5: #aa4a2a;
 
 $background: white;
-$foreground: $accent-5;
+$foreground: $accent-4;
 
 body{
     background-color: $background;
@@ -25,6 +26,8 @@ body{
 header{
     grid-area: header;
     margin-bottom: 5rem;
+    padding: 0.5rem;
+    background-color: $accent-1;
 
     ul{
         list-style: none;
@@ -32,8 +35,18 @@ header{
         display: flex;
 
         a{
-            color: $accent-4;
+            color: $accent-5;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            text-decoration: none;
+            padding: 0.5rem;
+            border-bottom: $accent-5 2px solid;
+            &:hover, &:focus{
+                background-color: rgba(255, 255, 255, 0.2);
+            }
         }
+        
     }
 }
 .content{
@@ -42,27 +55,68 @@ header{
     section{
         max-width: 1080px;
         padding: 1rem;
+        margin-bottom: 1rem;
     }
 
     #intro, #about{
         display: flex;
         align-items: center;
 
-        p{
-            text-align: justify;
-        }
-
         img{
             width: 100%;
         }
     }
-    
+
+    #offer{
+        
+        ol{
+            background-color: $accent-0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            margin-block: 0;
+            margin-inline: 0;
+
+            li{
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             max-width: 500px;
+             padding: 1rem;
+             margin-bottom: 0.5rem;
+
+                .number{
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 50%;
+                    font-size: 2rem;
+                    background-color: $accent-1;
+                    color: $accent-4;
+                    display: flex; 
+                    justify-content: space-around;
+                    align-items: center;               
+                }
+
+                b{
+                    color: $accent-5;
+                }
+            }         
+        }
+    }
 }
 
 footer{
     grid-area: footer;
+    height: 10vh;
+    background-color: #333333;
 }
 
 h1,h2,h3{
-    color: $accent-4;
+    color: $accent-5;
+}
+
+p{
+    text-align: justify;
 }
